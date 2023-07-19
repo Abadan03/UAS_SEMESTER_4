@@ -5,9 +5,8 @@
 // @import 'variables';
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
-
 
 /*--------------------------------------------------------------
 # General
@@ -15,7 +14,7 @@
 body {
     font-family: "poppins", sans-serif;
     color: #444444;
-    background-color: #ECF6FE;
+    background-color: #ecf6fe;
 }
 
 a {
@@ -195,7 +194,7 @@ h6 {
 // }
 
 .content-banner {
-    color: #75C2F6;
+    color: #75c2f6;
     min-height: 400px;
     height: 100%;
     position: relative;
@@ -206,7 +205,7 @@ h6 {
 
 .content-banner:before {
     position: absolute;
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     background-color: rgba(57, 49, 49, 0.7);
@@ -248,7 +247,6 @@ h6 {
     /* color: #ffffff; */
     transition: 0.3s;
     text-align: center;
-
 }
 
 /* .banner-btn:hover {
@@ -256,7 +254,6 @@ h6 {
 	color: #fe4066;
 	background-color: white;
 } */
-
 
 .header {
     position: relative;
@@ -273,7 +270,7 @@ h6 {
 }
 
 .logo span {
-    color: #FF9212;
+    color: #ff9212;
 }
 
 .nav-item .nav-link {
@@ -282,18 +279,18 @@ h6 {
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 500;
-    color: #535D6A;
+    color: #535d6a;
     transition: 0.15s;
 }
 
 .nav-item .nav-link:hover {
-    color: #08314E;
+    color: #08314e;
 }
 
 .header-btn {
     color: #ffffff;
     border-radius: 30px;
-    background-color: #75C2F6;
+    background-color: #75c2f6;
     border: none;
     font-weight: 500;
     outline: none;
@@ -303,12 +300,12 @@ h6 {
 }
 
 .header-btn:hover {
-    background-color: #08314E;
+    background-color: #08314e;
     cursor: pointer;
 }
 
 .navbar-scroll {
-    background-color: #75C2F6;
+    background-color: #75c2f6;
     padding: 0;
     position: fixed;
     top: 0;
@@ -318,12 +315,12 @@ h6 {
 }
 
 .navbar-scroll .nav-item .nav-link {
-    color: #08314E;
+    color: #08314e;
 }
 
 .navbar-scroll .header-btn {
     color: #ffffff;
-    background-color: #08314E;
+    background-color: #08314e;
 }
 
 .navbar-scroll .logo {
@@ -341,7 +338,7 @@ section {
 }
 
 section:nth-of-type(even) {
-    background-color: #ECF6FE;
+    background-color: #ecf6fe;
     color: white;
 }
 
@@ -473,7 +470,7 @@ section:nth-of-type(even) {
 
 #service h2 {
     font-weight: 700;
-    color: #08314E;
+    color: #08314e;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
@@ -489,7 +486,7 @@ section:nth-of-type(even) {
 }
 
 .card-title {
-    color: #08314E;
+    color: #08314e;
     font-weight: 700;
     font-size: 20px;
     margin-bottom: -8px;
@@ -499,45 +496,85 @@ section:nth-of-type(even) {
 # Footer
 --------------------------------------------------------------*/
 footer {
-    width: 1440px;
-    height: 280px;
+    // width: 1440px;
+    // height: 280px;
     margin-top: 50px;
-    background-color: #75C2F6;
+    background-color: #75c2f6;
 }
 
 footer .container {
-    justify-content: flex-start;
-    margin: 45px;
+    // justify-content: flex-start;
+    // margin: 45px;
 }
 
 footer .row {
-    display: flex;
-    width: 509px;
-    height: 210px;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // width: 509px;
+    // height: 210px;
+    // flex-direction: column;
+    // justify-content: center;
 }
 
-footer .container p {
+footer .description {
+    margin-right: 150px;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+footer h6 {
+    // font-weight: lighter;
+    color: #08314e;
+}
+
+footer .content {
     color: #000;
-    font-size: 18px;
+    // width: 350px;
+    // font-size: 18px;
     font-weight: 500;
 }
 
 footer .container #footer-bis {
-    color: #FF9212;
-    font-size: 20px;
+    color: #ff9212;
+    // font-size: 20px;
     font-weight: 700;
 }
 
 footer .container #footer-bus {
-    color: #3B1775;
-    font-size: 20px;
+    color: #3b1775;
+    // font-size: 20px;
     font-weight: 700;
 }
 
 footer .container .media-social i {
-    color: #08314E;
+    color: #08314e;
     font-size: 36px;
-    margin-right: 30px;
+    // margin-right: 30px;
+}
+
+@media (max-width: 575.98px) {
+    // footer {
+    //     display: grid;
+    // }
+
+    // footer .description {
+    //     margin-right: 0px;
+    // }
+
+    footer .description {
+        // display: inline;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .content-footer {
+        display: grid !important;
+    }
+    footer .secondary-content {
+        display: grid !important;
+        // text-align: center;
+    }
 }
