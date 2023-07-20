@@ -132,7 +132,7 @@
     <!-- ======= section Service ======= -->
     <section id="service">
         <div class="container">
-            <div class="row justify-content-between">
+            <div class="row justify-content-center align-items-center gap-4 gap-lg-5">
                 <div id="title-service" class="col-12 text-center">
                     <h2>Pelayanan Kami</h2>
                 </div>
@@ -175,27 +175,50 @@
 
             </div>
         </div>
-    </section> <!-- End Service_section -->
+    </section>
+    <!-- End Service_section -->
 
     <!-- ======= section Footer ======= -->
-    <footer>
+    <footer class="p-5">
         <div class="container">
-            <div class="row">
-                <p><span id="footer-bis">Bis</span><span id="footer-bus">Bus</span> adalah Lorem ipsum dolor sit amet
-                    consectetur.
-                    Purus vitae ac
-                    viverra egestas
-                    proin
-                    consectetur. Aliquam mi eget dictum vulputate blandit tincidunt. Quis sollicitudin mattis arcu
-                    aliquam justo enim enim sed feugiat. Congue diam adipiscing lacus cras tempus adipiscing mollis.</p>
+            {{-- Content --}}
+            <div class="d-flex flex-row content-footer">
+                {{-- Description section --}}
+                <div class="description">
+                    <p><span id="footer-bis">Bis</span><span id="footer-bus">Bus</span></p>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur. Diam dolor pulvinar cras volutpat neque odio pellentesque iaculis egestas.</p>
+                </div>
+                <div class="w-100 d-flex justify-center gap-lg-5 secondary-content">
+                    <div class="flex-row">
+                        <h5>Help</h5>
+                        <h6 class="">Help Center</h6>
+                        <h6 class="">FAQs</h6>
+                        <h6 class="">Privacy Policy</h6>
+                        <h6 class="">Cookie Policy</h6>
+                    </div>
+                    <div class="flex-row">
+                        <h5>Company</h5>
+                        <h6>About us</h6>
+                        <h6>Blog</h6>
+                        <h6>Careers</h6>
+                    </div>
+                    <div class="flex-row">
+                        <h5>Destination</h5>
+                        <h6>Countries/Territories</h6>
+                        <h6>Cities</h6>
+                    </div>
+                </div>
             </div>
-
-            <div class="media-social">
+            {{-- Content End --}}
+            <hr>
+            {{-- Logo Media --}}
+            <div class="media-social d-flex justify-content-end">
                 <i class="bi bi-facebook"></i>
                 <i class="bi bi-instagram"></i>
             </div>
+            {{-- Logo Media End --}}
         </div>
-    </footer><!-- End Footer -->
+    </footer>
     <!-- End Footer -->
     @vite('resources/js/app.js')
 </body>

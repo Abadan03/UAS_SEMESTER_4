@@ -12,7 +12,9 @@
 </head>
 <body>
     @include('layouts.nav')
-    @yield('content')
+    <div class="min-vw-100">
+        @yield('content')
+    </div>
     @vite('resources/js/app.js')
 </body>
 </html>
