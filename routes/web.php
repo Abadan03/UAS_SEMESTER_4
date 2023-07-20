@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,3 +26,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['auth'])->group(function () {
 
 });
+=======
+
+Auth::routes();
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home_auth');
+    // Route::get('/home', function () {
+        //     return view('home');
+        // });
+
+
+    });
+Route::get('/home', [IndexController::class, 'index'])->name('home');
+
+
+>>>>>>> 2d94529958c6fd214a1afd5d3ce135ccd0a51d39

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BisBus-Home</title>
+    <title>BisBus || Home</title>
     @vite('resources/sass/app.scss')
+    {{-- AOS ANIMATION --}}
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -38,10 +40,43 @@
                                 <a class="nav-link" href="#">Cek Tiket</a>
                             </li>
                         </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <button class="header-btn my-2 my-sm-0" type="submit">Sign Up</button>
-                            <button class="header-btn my-2 my-sm-0" type="submit">Sign In</button>
-                        </form>
+                        <div class="d-flex justify-between gap-4">
+                            {{-- <button class="header-btn my-2 my-sm-0" type="submit">Sign Up</button>
+                            <button class="header-btn my-2 my-sm-0" type="submit">Sign In</button> --}}
+                            @guest
+                                @if (Route::has('login'))
+                                    <div class="">
+                                        <a class="text-black" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    </div>
+                                @endif
+
+                                @if (Route::has('register'))
+                                    <div class="">
+                                        <a class="text-black" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </div>
+                                @endif
+                            @else
+                                <div class="d-flex justify-between gap-4 align-items-center justify-content-center">
+                                    <div>
+                                        <a>
+                                            {{ Auth::user()->name }}
+                                        </a>
+                                    </div>
+
+                                    <div>
+                                        <a class="text-black" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </div>
+                            @endguest
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -52,41 +87,46 @@
     <section id="hero" class="d-flex align-items-center justify-content-center">
         <div class="container" data-aos="fade-up">
 
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
                 <img src="{{ Vite::asset('resources/images/image_hero_section.svg') }}" alt="img_hero">
             </div>
         </div>
-    </section><!-- End Hero -->
+    </section>
+    <!-- End Hero -->
 
     <!-- ======= Form search ticket section ======= -->
-    <section id="form_search" class="form_search">
+    <section id="form_search" class="form_search" data-aos="flip-down" data-aos-duration="1500" data-aos-once="true">
         <div class="container">
             <div class="row justify-content-end">
-                <h5 class="mt-3 ">Tiket Bus</h5>
-
+                <h5 class="mt-3 text-black">Tiket Bus</h5>
+                {{-- Section Keberangkatan --}}
                 <div class="col-md-6 mt-3">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i
-                                class="bi bi-geo-alt text-primary"></i></span>
+                            class="bi bi-geo-alt text-primary"></i></span>
                         <input type="text" class="form-control" placeholder="keberangkatan" aria-label="keberangkata"
-                            aria-describedby="addon-wrapping">
+                        aria-describedby="addon-wrapping">
                     </div>
                 </div>
+                {{-- Section Keberangkatan End --}}
 
+                {{-- Section Tujuan --}}
                 <div class="col-md-6 mt-3">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i
-                                class="bi bi-geo-alt text-primary"></i></span>
+                            class="bi bi-geo-alt text-primary"></i></span>
                         <input type="text" class="form-control" placeholder="tujuan" aria-label="tujuan"
-                            aria-describedby="addon-wrapping">
+                        aria-describedby="addon-wrapping">
                     </div>
                 </div>
+                {{-- Section Tujuan End --}}
 
                 <div class="col-md-6 mt-3">
                     <div class="input-group flex-nowrap">
+                        {{-- <h1 for="">Tanggal Keberangkatan</h1> --}}
                         <span class="input-group-text" id="addon-wrapping"><i
-                                class="bi bi-calendar3 text-primary"></i></span>
-                        <input type="text" class="form-control" placeholder="Tanggal Keberangkatan"
+                            class="bi bi-calendar3 text-primary me-2"></i>Tanggal Keberangkatan</span>
+                        <input type="date" class="form-control" placeholder="Tanggal Keberangkatan"
                             aria-label="tujuan" aria-describedby="addon-wrapping">
                     </div>
                 </div>
@@ -193,8 +233,13 @@
             {{-- Content End --}}
             <hr>
             {{-- Logo Media --}}
+<<<<<<< HEAD
             <div class="media-social d-flex justify-content-end">
                 <i class="bi bi-facebook me-2"></i>
+=======
+            <div class="media-social d-flex justify-content-end gap-3">
+                <i class="bi bi-facebook"></i>
+>>>>>>> 2d94529958c6fd214a1afd5d3ce135ccd0a51d39
                 <i class="bi bi-instagram"></i>
             </div>
             {{-- Logo Media End --}}
@@ -202,6 +247,13 @@
     </footer>
     <!-- End Footer -->
     @vite('resources/js/app.js')
+
+    {{-- AOS ANIMATION --}}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
+
