@@ -83,6 +83,5 @@
                 </div>
             </div>
         </div>
-        <<<<<<< HEAD=======</div>
-            >>>>>>> 2d94529958c6fd214a1afd5d3ce135ccd0a51d39
-        @endsection
+    </div>
+@endsection
