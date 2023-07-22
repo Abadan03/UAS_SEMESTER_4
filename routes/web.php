@@ -15,30 +15,20 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-<<<<<<< HEAD
+
+Auth::routes();
+// route yang pertama kali muncul
+// akses / bakal nampilin view login yang ada didalam folder auth
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
-
-});
-=======
-
-Auth::routes();
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home_auth');
+    // route home ketika sudah login
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
     // Route::get('/home', function () {
-        //     return view('home');
-        // });
+    //     return view('home');
+    // });
 
 
-    });
-Route::get('/home', [IndexController::class, 'index'])->name('home');
-
-
->>>>>>> 2d94529958c6fd214a1afd5d3ce135ccd0a51d39
+});
