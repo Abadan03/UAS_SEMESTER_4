@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $pageTitle }}</title>
+    {{-- <title>{{ $pageTitle }}</title> --}}
     @vite('resources/sass/app.scss')
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
-    <div id="app" style="background-color: #F4F2DE">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-color: #F4F2DE">
-            <div class="container" style="background-color: #A1CCD1">
+            <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     BisBus
                 </a>
@@ -56,7 +54,7 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -70,11 +68,11 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4 w-100" style="background-color: #F4F2DE">
+        <main class="py-4 w-100">
             @yield('content')
         </main>
     </div>
+    @vite(['resources/js/app.js'])
 </body>
 
 </html>
