@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/review', function () {
+    return view('review');
+});
+
 Route::middleware(['auth'])->group(function () {
     // route home ketika sudah login
     Route::get('/home', [HomeController::class, 'index'])->name('home');
