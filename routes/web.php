@@ -18,14 +18,14 @@ use App\Http\Controllers\IndexController;
 
 Auth::routes();
 
+Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home_auth');
+    Route::get('/caritiket', [HomeController::class, 'index'])->name('home');
     // Route::get('/home', function () {
         //     return view('home');
         // });
 
 
     });
-Route::get('/home', [IndexController::class, 'index'])->name('home');
 
 
