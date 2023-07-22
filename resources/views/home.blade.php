@@ -13,26 +13,6 @@
 
 <body>
     <!-- ======= Header ======= -->
-    {{-- <header id="header" class="fixed-top ">
-        <div class="container d-flex align-items-center justify-content-lg-between">
-
-            <h1 class="logo me-auto me-lg-0"><a href="#"><span>Bis</span>Bus</a></h1>
-
-            <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Cari Tiket</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Cek Tiket</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a class="btn btn-light me-md-2 text-primary" type="button" href="#">Sign Up</a>
-                <a class="btn btn-primary" type="button" href="#">Sign In</a>
-            </div>
-        </div>
-    </header><!-- End Header --> --}}
 
     <header class="header">
         <div class="header-inner">
@@ -226,7 +206,8 @@
                 {{-- Description section --}}
                 <div class="description">
                     <p><span id="footer-bis">Bis</span><span id="footer-bus">Bus</span></p>
-                    <p class="content">Lorem ipsum dolor sit amet consectetur. Diam dolor pulvinar cras volutpat neque odio pellentesque iaculis egestas.</p>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur. Diam dolor pulvinar cras volutpat neque
+                        odio pellentesque iaculis egestas.</p>
                 </div>
                 <div class="w-100 d-flex justify-center gap-lg-5 secondary-content">
                     <div class="flex-row">
@@ -252,8 +233,13 @@
             {{-- Content End --}}
             <hr>
             {{-- Logo Media --}}
+<<<<<<< HEAD
+            <div class="media-social d-flex justify-content-end">
+                <i class="bi bi-facebook me-2"></i>
+=======
             <div class="media-social d-flex justify-content-end gap-3">
                 <i class="bi bi-facebook"></i>
+>>>>>>> 2d94529958c6fd214a1afd5d3ce135ccd0a51d39
                 <i class="bi bi-instagram"></i>
             </div>
             {{-- Logo Media End --}}

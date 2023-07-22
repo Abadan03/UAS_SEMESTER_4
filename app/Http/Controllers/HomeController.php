@@ -25,4 +25,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2d94529958c6fd214a1afd5d3ce135ccd0a51d39
