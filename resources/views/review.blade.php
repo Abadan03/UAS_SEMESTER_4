@@ -45,7 +45,7 @@
     </nav>
 
     <!-- =======main content======= -->
-    <section class="main-content d-flex-column justify-content-center">
+    <section class="main-content d-flex">
         <div class="container mt-4">
             <div class="row">
                 <h2>Data Pemesanan</h2>
@@ -76,21 +76,46 @@
                             </div>
                         </div>
                     </div>
-                    <h2 class="mt-2">Rincian Harga</h2>
+                    <h2 class="mt-3">Rincian Harga</h2>
                     <div class="review-form bg-light rounded-2 col-md-8">
                         <div class="row p-2">
                             <h5>Harga Yang Anda Bayar</h5>
-                            <div class="harga-content d-flex">
-                                <p class="col-md-4 fs-6">Alfath Travel (x1)</p>
-                                <p class="text-warning col-md-3 fs-6 mx-4">Rp. 45.000</p>
+                            <div class="harga-content d-flex justify-content-between">
+                                <p class="fs-6">Alfath Travel (x1)</p>
+                                <p class="text-warning fs-6 mx-4">Rp. 45.000</p>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+                                <button class="btn btn-warning text-white" type="button">Pembayaran</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 {{-- Tampilan untuk ID dan tampilan informasi keberangkatan --}}
-                <div class="harga-content d-flex">
-                    <p class="col-md-4 fs-6">No.ID Pesanan</p>
-                    <p class="text-warning col-md-3 fs-6 mx-4">837487259734</p>
+                <div class="col-md-5 d-flex flex-column">
+                    <div class="bg-light rounded-3 mb-3">
+                        <div class="id-pesanan d-flex gap-3 p-3 justify-content-between">
+                            <p class="fs-5">No.ID Pesanan</p>
+                            <p class="fs-5">837487259734</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded-3">
+                        <div class="id-pesanan gap-3 p-3">
+                            <h5><img src="{{ Vite::asset('resources/images/logo-bisbus.png') }}"
+                                    class="me-3">Keberangkatan</h5>
+                            <h6>Tanggal Keberangkatan</h6>
+                            <h6>Nama Armada Yang Dipilih</h6>
+                            {{-- dipanggil dari kota dan terminal keberangkatan yang dipilih --}}
+                            <div class="berangkat">
+                                <h6>Kota Berangkat</h6>
+                                <p class="fs-6">Terminal Keberangkatan</p>
+                            </div>
+                            {{-- dipanggil dari kota dan terminal tujuan yang dipilih --}}
+                            <div class="tujuan">
+                                <h6>Kota Tujuan</h6>
+                                <p class="fs-6">Terminal Tujuan</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
