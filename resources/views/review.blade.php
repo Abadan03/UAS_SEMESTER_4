@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BisBus || Home</title>
-    @vite('resources/sass/app.scss')
     {{-- AOS ANIMATION --}}
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    @vite('resources/sass/app.scss')
 </head>
 
 <body>
@@ -16,9 +16,8 @@
     <!-- ======= Header ======= -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-fixed w-100">
         <div class="container justify-content-end">
-            <a class="navbar-brand" href="#"><img src="{{ Vite::asset('resource/images/logo-bisbus.png') }}"
-                    alt="" width="30" class="d-inline-block align-text-top me-3"><Span
-                    class="">Bis</Span>Bus</a>
+            <a class="navbar-brand" href="#"><img src="{{ Vite::asset('resource/images/logo-bisbus.png') }}" alt=""
+                    width="30" class="d-inline-block align-text-top me-3"><Span class="">Bis</Span>Bus</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -64,8 +63,7 @@
                                     aria-label="First name">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name"
-                                    aria-label="Last name">
+                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
                             </div>
                         </div>
                     </div>
