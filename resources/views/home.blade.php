@@ -34,9 +34,41 @@
                     </li>
                 </ul>
 
-                <div>
-                    <button class="button-primary">Sign Up</button>
-                    <button class="button-secondary">Sign In</button>
+                <div class="d-flex w-full align-items-center gap-3">
+                    @guest
+                        @if (Route::has('register'))
+                        <div class=" button-primary">
+                            <a class="text-black" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+                        </div>
+                        @endif
+                        @if (Route::has('login'))
+                            <div class="align-items-center">
+                                <a class="px-4 py-2 button-secondary" href="{{ route('login') }}">{{ __('Sign In') }}</a>
+                            </div>
+                        @endif
+                    @else
+                        <div class="container d-flex  align-items-center justify-content-center gap-3">
+                            <div class="">
+                                <a class="text-black button-secondary px-4 py-2" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                            <div class="relative">
+                                <div id="" class="">
+                                    {{ Auth::user()->name }}
+                                </div>
+                            </div>
+                        </div>
+                    @endguest
+
+                    {{-- <button class="button-primary">Sign Up</button>
+                    <button class="button-secondary">Sign In</button> --}}
                 </div>
             </div>
         </div>
