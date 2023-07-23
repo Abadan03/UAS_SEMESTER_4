@@ -23,10 +23,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/review', function () {
-    return view('review');
-});
-
 Auth::routes();
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
