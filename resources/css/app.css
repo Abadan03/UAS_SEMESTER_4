@@ -7,3 +7,46 @@ body {
         rgba(6, 84, 171, 1) 59%
     );
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+
+* {
+    font-family: "Mochiy Pop P One", sans-serif;
+}
+
+body {
+    background: rgb(0, 247, 163);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 247, 163, 1) 0%,
+        rgba(198, 11, 60, 1) 35%,
+        rgba(149, 171, 6, 1) 91%
+    );
+}
+
+.nav-bg {
+    background: rgb(0, 247, 163);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 247, 163, 1) 0%,
+        rgba(243, 255, 0, 1) 35%,
+        rgba(149, 171, 6, 1) 91%
+    );
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* scroll-snap-align: start; */
+}
+
+.one {
+    background: rgb(0, 247, 163);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 247, 163, 1) 24%,
+        rgba(255, 0, 149, 1) 53%
+    );
+}

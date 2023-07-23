@@ -233,13 +233,8 @@
             {{-- Content End --}}
             <hr>
             {{-- Logo Media --}}
-<<<<<<< HEAD
-            <div class="media-social d-flex justify-content-end">
-                <i class="bi bi-facebook me-2"></i>
-=======
             <div class="media-social d-flex justify-content-end gap-3">
                 <i class="bi bi-facebook"></i>
->>>>>>> 2d94529958c6fd214a1afd5d3ce135ccd0a51d39
                 <i class="bi bi-instagram"></i>
             </div>
             {{-- Logo Media End --}}
