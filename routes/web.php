@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Auth::routes();
+// route yang pertama kali muncul
+// akses / bakal nampilin view login yang ada didalam folder auth
 Route::get('/', function () {
-    return view('home');
+    return view('auth.login');
+});
+
+Route::get('/review', function () {
+    return view('review');
+});
+
+
+Auth::routes();
+
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/caritiket', [HomeController::class, 'index'])->name('home');
+
+    // route home ketika sudah login
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    // Route::get('/home', function () {
+        //     return view('home');
+        // });
+
+
+
 });
