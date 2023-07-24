@@ -19,8 +19,11 @@ use App\Http\Controllers\IndexController;
 Auth::routes();
 // route yang pertama kali muncul
 // akses / bakal nampilin view login yang ada didalam folder auth
-Route::get('/', function () {
-    return view('auth.login');
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
+Route::get('/pembayaran', function () {
+    return view('pembayaran');
 });
 
 Auth::routes();
