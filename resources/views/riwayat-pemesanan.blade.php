@@ -18,7 +18,7 @@
 
 
     <!-- logo title -->
-    <link rel="icon" href="assets/img/logo-bisbus.png" type="image/x-icon">
+    <link rel="icon" href="{{asset('images/logo-bisbus.png')}}" type="image/x-icon">
 
     <title>Bisbus</title>
     @vite('resources/sass/app.scss')
@@ -27,7 +27,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-color w-100">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets/img/logo-bisbus.png" alt="" width="30" class="d-inline-block align-text-top me-3">Bisbus</a>
+        <a class="navbar-brand" href="#"><img src="{{asset('images/logo-bisbus.png')}}" alt="" width="30" class="d-inline-block align-text-top me-3">Bisbus</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -63,7 +63,7 @@
                     <p>24 Juli 2023</p>
                 </div>
                 <div class="col-md-4 mt-5">
-                    <img src="assets/img/arrow-listtiket.png" alt="">
+                    <img src="{{asset('images/arrow-listtiket.png')}}" alt="">
                 </div>
                 <div class="col-md-4 riwayat-2">
                     <h4>Status</h4>

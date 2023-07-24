@@ -25,7 +25,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-color position-fixed w-100">
       <div class="container">
-<a class="navbar-brand" href="#"><img src="{{ Vite::asset('resources/images/logo-bisbus.png')}}" alt="" width="30" class="d-inline-block align-text-top me-3">Bisbus</a>
+        <a class="navbar-brand" href="#"><img src="{{asset('images/logo-bisbus.png')}}" alt="" width="30" class="d-inline-block align-text-top me-3">Bisbus</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,51 +52,204 @@
 
     <!-- redirect search -->
     <section id="redirect-search">
-        <div class="container h-50">
-          <div class="row h-50">
-            <div class="col-md-3 search-1 my-auto">
-              <div class="back">
-                <h3><img src="assets/img/maps-search.png" alt="">Keberangkatan</h3>
-              </div>
+        <div class="container">
+            <div class="row mt-5">
+              <div class="col-sm-3">Terminal Berangkat</div>
+              <div class="col-sm-3">Terminal Tujuan</div>
+              <div class="col-sm-3">Tanggal Berangkat</div>
+              <a class="btn btn-primary col-sm-2" href="#" role="button">Edit</a>
             </div>
-            <div class="col-md-3 search-1 my-auto">
-              <div class="back">
-                <h3><img src="assets/img/maps-search.png" alt="">Tujuan</h3>
-              </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Alfath Travel</h5>
+                          <h6 class="card-subtitle mb-4 text-body- mt-1">Alfath Travel</h6>
+                          <div class="row">
+                            <div class="col">
+                                <h3>07.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Keberangkatan</p>
+                            </div>
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col">
+                                <h3>10.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Tujuan</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                                <p>Tersedia : 40 Kursi</p>
+                                <p style="color: #FF9212">Harga : Rp 25.000 <span style="color: #535D6A">/kursi</span></p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Button</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Alfath Travel</h5>
+                          <h6 class="card-subtitle mb-4 text-body-secondary mt-1">Alfath Travel</h6>
+                          <div class="row">
+                            <div class="col">
+                                <h3>07.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Keberangkatan</p>
+                            </div>
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col">
+                                <h3>10.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Tujuan</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                                <p>Tersedia : 40 Kursi</p>
+                                <p style="color: #FF9212">Harga : Rp 25.000 <span style="color: #535D6A">/kursi</span></p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Button</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Alfath Travel</h5>
+                          <h6 class="card-subtitle mb-4 text-body-secondary mt-1">Alfath Travel</h6>
+                          <div class="row">
+                            <div class="col">
+                                <h3>07.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Keberangkatan</p>
+                            </div>
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col">
+                                <h3>10.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Tujuan</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                                <p>Tersedia : 40 Kursi</p>
+                                <p style="color: #FF9212">Harga : Rp 25.000 <span style="color: #535D6A">/kursi</span></p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Button</button>
+                        </div>
+                      </div>
+                </div>
             </div>
-            <div class="col-md-3 search-1 my-auto">
-              <div class="back">
-                <h3><img src="assets/img/icon-calender.png" alt="">Tanggal Berangkat</h3>
-              </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Alfath Travel</h5>
+                          <h6 class="card-subtitle mb-4 text-body- mt-1">Alfath Travel</h6>
+                          <div class="row">
+                            <div class="col">
+                                <h3>07.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Keberangkatan</p>
+                            </div>
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col">
+                                <h3>10.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Tujuan</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                                <p>Tersedia : 40 Kursi</p>
+                                <p style="color: #FF9212">Harga : Rp 25.000 <span style="color: #535D6A">/kursi</span></p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Button</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Alfath Travel</h5>
+                          <h6 class="card-subtitle mb-4 text-body-secondary mt-1">Alfath Travel</h6>
+                          <div class="row">
+                            <div class="col">
+                                <h3>07.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Keberangkatan</p>
+                            </div>
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col">
+                                <h3>10.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Tujuan</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                                <p>Tersedia : 40 Kursi</p>
+                                <p style="color: #FF9212">Harga : Rp 25.000 <span style="color: #535D6A">/kursi</span></p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Button</button>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Alfath Travel</h5>
+                          <h6 class="card-subtitle mb-4 text-body-secondary mt-1">Alfath Travel</h6>
+                          <div class="row">
+                            <div class="col">
+                                <h3>07.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Keberangkatan</p>
+                            </div>
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col">
+                                <h3>10.00</h3>
+                            </div>
+                            <div class="col">
+                                <p>Terminal Tujuan</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                                <p>Tersedia : 40 Kursi</p>
+                                <p style="color: #FF9212">Harga : Rp 25.000 <span style="color: #535D6A">/kursi</span></p>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Button</button>
+                        </div>
+                      </div>
+                </div>
             </div>
-            <button class="col-md-3 button-list my-auto">Edit</button>
           </div>
-          <div class="row back-tiket">
-            <div class="col nama-travel">
-              <h4>Alfath Travel</h4>
-              <h5>Alfath Travel</h5>
-            </div>
-            <div class="col waktu-berangkat">
-              <h4>10.00</h4>
-              <p>Terminal Keberangkatan</p>
-            </div>
-            <div class="col icon-kanan">
-              <img src="assets/img/arrow-listtiket.png" alt="">
-            </div>
-            <div class="col waktu-tujuan">
-              <h4>14.00</h4>
-              <p>Terminal Tujuan</p>
-            </div>
-            <div class="col stok-kursi">
-              <h4>Tersedia</h4>
-              <p>15 Kursi</p>
-            </div>
-            <div class="col harga">
-              <h4>Rp45.000 <span>/kursi</span></h4>
-              <button>Pesan Tiket</button>
-            </div>
-          </div>
-        </div>
     </section>
 
     <script src=""></script>
