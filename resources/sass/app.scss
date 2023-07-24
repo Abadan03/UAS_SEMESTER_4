@@ -442,22 +442,6 @@ footer .container .media-social i {
         display: grid !important;
     }
 
-    // ==== Halaman listtiket ===//
-    #redirect-search {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .search-1 h3 {
-        color: #000;
-        font-family: Montserrat;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 60px;
-        margin-left: 10px;
-
-    }
 
     .back {
         width: 220px;
@@ -466,6 +450,7 @@ footer .container .media-social i {
         border: 1px solid rgba(91, 89, 94, 0.40);
         background: #FFF;
     }
+
 
     .back h3 {
         color: #000;
@@ -659,12 +644,5 @@ footer .container .media-social i {
     }
 
 
-    // ==== halaman review ===//
-    // .view-pemesan .view-hasil {
-    //     width: 730px;
-    //     height: 134px;
-    //     border-radius: 10px;
-    //     background: rgba(63, 63, 60, 0.08);
-    // }
 
 }
