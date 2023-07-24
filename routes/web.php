@@ -32,9 +32,4 @@ Route::middleware(['auth'])->group(function () {
     // route home ketika sudah login
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     // Route::get('/home', function () {
-    //     return view('home');
-    // });
 
-
-
-});
