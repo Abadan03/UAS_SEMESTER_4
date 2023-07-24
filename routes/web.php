@@ -28,6 +28,7 @@ Route::get('/review', function () {
 });
 
 
+
 Auth::routes();
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
