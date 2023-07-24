@@ -35,6 +35,9 @@ Route::middleware(['auth'])->group(function () {
     //     return view('home');
     // });
 
-
+    // Cari tiket
+    Route::get('/caritiket', function () {
+        return view('caritiket');
+    });
 
 });
