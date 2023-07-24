@@ -22,9 +22,6 @@ Auth::routes();
 // Route::get('/', function () {
 //     return view('auth.login');
 // });
-Route::get('/pembayaran', function () {
-    return view('pembayaran');
-});
 
 Auth::routes();
 
