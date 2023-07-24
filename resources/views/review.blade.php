@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BisBus || Home</title>
-    @vite('resources/sass/app.scss')
     {{-- AOS ANIMATION --}}
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    @vite('resources/sass/app.scss')
 </head>
 
 <body>
@@ -45,48 +45,79 @@
     </nav>
 
     <!-- =======main content======= -->
-    <section class="main-content d-flex-column justify-content-center" style="background-color: ">
+    <section class="main-content d-flex">
         <div class="container mt-4">
             <div class="row">
-                <div class="title-form">
-                    <h2>Data Pemesanan</h2>
-                    <p>Periksa Pesanan Anda</p>
-                </div>
+                <h2>Data Pemesanan</h2>
+                <p class="text-warning">Pastikan Pesanan Anda Benar Sebelum Melanjutkan Pembayaran</p>
                 <hr>
-                <div class="form-review col-md-7 m">
+                {{-- Tampilan halaman untuk edit dan Rincian harga --}}
+                <div class="col-md-7">
                     <h2>Data Pemesan</h2>
-                    <div class="view-pemesan" style="background-color: #F0F0F0">
-                        <input class="form-control" type="text" placeholder="Nama Penumpang"
-                            aria-label="default input example">
-                        <div class="row g-3">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="First name"
-                                    aria-label="First name">
+                    {{-- bagian ini nanti akan menampilkan isi dari form input sebelumnya --}}
+                    <div class="review-form bg-light rounded-2">
+                        <div class="row p-2">
+                            <div class="form-floating mb-2">
+                                <input type="email" class="form-control" id="floatingNamapenumpang"
+                                    placeholder="name@example.com">
+                                <label for="floatingNamapenumpang">Nama Penumpang</label>
                             </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name"
-                                    aria-label="Last name">
+                            <div class="form-floating mb-2">
+                                <input type="no.telepon" class="form-control" id="floatingTelepon"
+                                    placeholder="No.Telepon">
+                                <label for="floatingTelepon">No.Telepon</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="floatingEmail" placeholder="email">
+                                <label for="floatingEmail">Email</label>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+                                <button class="btn btn-primary" type="button">Edit</button>
                             </div>
                         </div>
                     </div>
-                    <h2>Rincian Harga</h2>
-                    <div class="view-pemesan">
-                        <p>Harga Yang Anda Bayar</p>
-                        <p>Alfath Travel (X jumlah tiket)</p>
-                        <p>Rp 45.500</p>
+                    <h2 class="mt-3">Rincian Harga</h2>
+                    <div class="review-form bg-light rounded-2 col-md-8">
+                        <div class="row p-2">
+                            <h5>Harga Yang Anda Bayar</h5>
+                            <div class="harga-content d-flex justify-content-between">
+                                <p class="fs-6">Alfath Travel (x1)</p>
+                                <p class="text-warning fs-6 mx-4">Rp. 45.000</p>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+                                <button class="btn btn-warning text-white" type="button">Pembayaran</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="view-tujuan col-md-5" style="background-color: rgba(193, 193, 188, 0.11);">
-                    <h2>Keberangkatan</h2>
-                    <p>Tanggal Keberangkatan</p>
-                    <h3>Alfath Travel</h3>
-                    <h4>Keberangkatan</h4>
-                    <p>Nama Terminal Keberangkatan </p>
-                    <h4>Tujuan</h4>
-                    <p>Nama Tujuan Keberangkatan</p>
+                {{-- Tampilan untuk ID dan tampilan informasi keberangkatan --}}
+                <div class="col-md-5 d-flex flex-column">
+                    <div class="bg-light rounded-3 mb-3">
+                        <div class="id-pesanan d-flex gap-3 p-3 justify-content-between">
+                            <p class="fs-5">No.ID Pesanan</p>
+                            <p class="fs-5">837487259734</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded-3">
+                        <div class="id-pesanan gap-3 p-3">
+                            <h5><img src="{{ Vite::asset('resources/images/logo-bisbus.png') }}"
+                                    class="me-3">Keberangkatan</h5>
+                            <h6>Tanggal Keberangkatan</h6>
+                            <h6>Nama Armada Yang Dipilih</h6>
+                            {{-- dipanggil dari kota dan terminal keberangkatan yang dipilih --}}
+                            <div class="berangkat">
+                                <h6>Kota Berangkat</h6>
+                                <p class="fs-6">Terminal Keberangkatan</p>
+                            </div>
+                            {{-- dipanggil dari kota dan terminal tujuan yang dipilih --}}
+                            <div class="tujuan">
+                                <h6>Kota Tujuan</h6>
+                                <p class="fs-6">Terminal Tujuan</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 

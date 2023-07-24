@@ -19,14 +19,9 @@ use App\Http\Controllers\IndexController;
 Auth::routes();
 // route yang pertama kali muncul
 // akses / bakal nampilin view login yang ada didalam folder auth
-Route::get('/', function () {
-    return view('auth.login');
-});
-
-Route::get('/review', function () {
-    return view('review');
-});
-
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
 
 Auth::routes();
 
@@ -37,8 +32,8 @@ Route::middleware(['auth'])->group(function () {
     // route home ketika sudah login
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     // Route::get('/home', function () {
-        //     return view('home');
-        // });
+    //     return view('home');
+    // });
 
 
 
