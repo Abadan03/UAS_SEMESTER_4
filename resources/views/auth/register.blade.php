@@ -45,6 +45,16 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label for="email"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('No Telpon') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="no_telpon" type="text"
+                                        class="form-control" name="no_telpon">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label for="password"
                                     class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 

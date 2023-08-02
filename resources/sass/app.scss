@@ -15,6 +15,8 @@ body {
     font-family: "poppins", sans-serif;
     color: #444444;
     background-color: #ecf6fe;
+    width: 100%;
+    height: 100vh;
 }
 
 a {
@@ -60,6 +62,7 @@ nav .logo-title {
 .navbar-brand {
     font-weight: 700;
     font-size: 20px;
+    color: black;
 }
 
 .nav-link {
@@ -84,7 +87,7 @@ nav .logo-title {
     width: 133px;
     height: 40px;
     border-radius: 10px;
-    background: var(--button, #068FF8);
+    background: var(--button, #068ff8);
     color: #ffff;
     font-size: 16px;
     font-weight: 700;
@@ -425,8 +428,229 @@ footer .container .media-social i {
     font-size: 36px;
 }
 
-@media (max-width: 575.98px) {
+/*--------------------------------------------------------------
+# Footer END
+--------------------------------------------------------------*/
 
+.back {
+    width: 220px;
+    height: 54px;
+    border-radius: 10px;
+    border: 1px solid rgba(91, 89, 94, 0.4);
+    background: #fff;
+}
+
+.back h3 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 180px;
+    height: 31px;
+}
+
+.button-list {
+    display: flex;
+    width: 119px;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #068ff8;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
+.back-tiket {
+    width: 1280px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nama-travel h4 {
+    color: #110e0e;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 30px;
+    display: flex;
+    width: 228px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nama-travel h5 {
+    color: var(--paragraf, #535d6a);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 228px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.waktu-berangkat h4 {
+    color: var(--color-font-card, #110e0e);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 30px;
+    display: flex;
+    width: 180px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.waktu-berangkat p {
+    color: var(--paragraf, #535d6a);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 180px;
+    height: 57px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-kanan img {
+    margin-top: 30px;
+}
+
+.waktu-tujuan h4 {
+    margin-top: 30px;
+    color: var(--color-font-card, #110e0e);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 220px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.waktu-tujuan p {
+    color: var(--paragraf, #535d6a);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 220px;
+    height: 57px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stok-kursi h4 {
+    margin-top: 30px;
+    color: var(--color-font-card, #110e0e);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 127px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stok-kursi p {
+    color: var(--color-font-card, #110e0e);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 127px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.harga h4 {
+    margin-top: 30px;
+    color: var(--ikon, #ff9212);
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 161px;
+    height: 37px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.harga span {
+    color: var(--paragraf, #535d6a);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.harga button {
+    margin-top: 50px;
+    width: 217px;
+    height: 68px;
+    border-radius: 10px;
+    background: var(--ikon, #ff9212);
+    border: none;
+}
+
+// riwayat
+.riwayat-tiket {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.text-brand {
+    color: black;
+}
+
+.cardlist {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+// BUAT RESPONSIVE
+
+@media (max-width: 575.98px) {
     footer .description {
         width: 100%;
         justify-content: center;
@@ -441,208 +665,4 @@ footer .container .media-social i {
     footer .secondary-content {
         display: grid !important;
     }
-
-
-    .back {
-        width: 220px;
-        height: 54px;
-        border-radius: 10px;
-        border: 1px solid rgba(91, 89, 94, 0.40);
-        background: #FFF;
-    }
-
-
-    .back h3 {
-        color: #000;
-        font-family: Montserrat;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        width: 180px;
-        height: 31px;
-    }
-
-    .button-list {
-        display: flex;
-        width: 119px;
-        height: 43px;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        background-color: #068FF8;
-        border-radius: 10px;
-        color: #ffffff;
-        font-family: Poppins;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        border: none;
-    }
-
-    .back-tiket {
-        width: 1280px;
-        height: 240px;
-        flex-shrink: 0;
-        border-radius: 10px;
-        background: #ffff;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    .nama-travel h4 {
-        color: #110E0E;
-        font-family: Poppins;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        margin-top: 30px;
-        display: flex;
-        width: 228px;
-        height: 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nama-travel h5 {
-        color: var(--paragraf, #535D6A);
-        font-family: Poppins;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 228px;
-        height: 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .waktu-berangkat h4 {
-        color: var(--color-font-card, #110E0E);
-        font-family: Poppins;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        margin-top: 30px;
-        display: flex;
-        width: 180px;
-        height: 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .waktu-berangkat p {
-        color: var(--paragraf, #535D6A);
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 180px;
-        height: 57px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .icon-kanan img {
-        margin-top: 30px;
-    }
-
-    .waktu-tujuan h4 {
-        margin-top: 30px;
-        color: var(--color-font-card, #110E0E);
-        font-family: Poppins;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 220px;
-        height: 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .waktu-tujuan p {
-        color: var(--paragraf, #535D6A);
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 220px;
-        height: 57px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .stok-kursi h4 {
-        margin-top: 30px;
-        color: var(--color-font-card, #110E0E);
-        font-family: Poppins;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 127px;
-        height: 30px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .stok-kursi p {
-        color: var(--color-font-card, #110E0E);
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 127px;
-        height: 30px;
-        flex-direction: column;
-        justify-content: center;
-
-    }
-
-    .harga h4 {
-        margin-top: 30px;
-        color: var(--ikon, #FF9212);
-        font-family: Poppins;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 161px;
-        height: 37px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .harga span {
-        color: var(--paragraf, #535D6A);
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-    }
-
-    .harga button {
-        margin-top: 50px;
-        width: 217px;
-        height: 68px;
-        border-radius: 10px;
-        background: var(--ikon, #FF9212);
-        border: none;
-    }
-
-
-
 }

@@ -1,3 +1,8 @@
+{{-- @php
+    $currentRouteName = Route::currentRouteName();
+@endphp --}}
+
+{{-- navbar start--}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed w-100">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="assets/img/logo-bisbus.png" alt="" width="30"
@@ -9,13 +14,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item mx-2">
-                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="{{ url('caritiket') }}">Cari Tiket</a>
+                    <a class="nav-link" href="#">Cari Tiket</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="{{ url('riwayatpemesanan') }}">Tiket Saya</a>
+                    <a class="nav-link" href="#">Tiket Saya</a>
                 </li>
             </ul>
 
@@ -23,12 +28,12 @@
                 @guest
                     @if (Route::has('register'))
                     <div class=" button-primary">
-                        <a class="text-black" href="{{ url('register') }}">{{ __('Sign Up') }}</a>
+                        <a class="text-black" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                     </div>
                     @endif
                     @if (Route::has('login'))
                         <div class="align-items-center">
-                            <a class="px-4 py-2 button-secondary" href="{{ url('login') }}">{{ __('Sign In') }}</a>
+                            <a class="px-4 py-2 button-secondary" href="{{ route('login') }}">{{ __('Sign In') }}</a>
                         </div>
                     @endif
                 @else
