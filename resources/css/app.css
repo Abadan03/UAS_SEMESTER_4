@@ -1,11 +1,9 @@
 body {
     background: rgb(2, 0, 36);
-    background: linear-gradient(
-        90deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(9, 9, 121, 1) 35%,
-        rgba(6, 84, 171, 1) 59%
-    );
+    background: linear-gradient(90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(8, 84, 171) 59%);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
