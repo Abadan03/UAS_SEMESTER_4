@@ -1,7 +1,7 @@
 @extends('layouts.defaults')
 @section('content')
 
-{{-- main content-form start--}}
+
 <div class="main-content">
     <div class="container">
         <div class="row">
@@ -12,7 +12,7 @@
         <form class="needs-validation mt-4" novalidate>
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">Nama Penumpang</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="{{ Auth::user()->name }}" required>
                 <div class="invalid-feedback">
                   Valid name is required.
                 </div>
@@ -48,4 +48,6 @@
           </form>
     </div>
 </div>
+
+
 @endsection
