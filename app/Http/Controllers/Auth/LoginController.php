@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -39,6 +41,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
@@ -49,6 +52,14 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
+            $username = $request->username;
+            Session::put('username', $username);
+            $usern = Session::get('username');
+            $role = User::where('username', $usern)->pluck('role');
+            echo $usern;
+            echo $role;
+            exit;
+            Session::put('role', $role);
             return redirect()->intended('home');
         }
 
