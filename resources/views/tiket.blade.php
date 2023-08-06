@@ -21,14 +21,52 @@
             </div>
             <div class="col-md-12">
                 <div class="card" id="invoice">
-                    <div class="card-header bg-transparent header-elements-inline">
-                        <h6 class="card-title text-primary">Tiket #<?= $data_pemesanan['id_pemesanan'] ?></h6>
-                    </div>
+                    @foreach ($tiket as $data)
+                        @if ($data->id == $data_pemesanan['id_tiket'])
+
+                        <div class="card-header bg-transparent header-elements-inline">
+                            <h6 class="card-title text-primary">
+                                {{ $data->kota_keberangkatan }} -> {{ $data->kota_tujuan}} | {{ $data->jam_keberangkatan }} -> {{ $data->jam_tujuan }}
+                            </h6>
+                        </div>
+
+                        @endif
+                    @endforeach
+
+
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="mb-4 pull-left">
-                        {{-- @foreach ($data_pemesanan as $pemesanan) --}}
+
+                                    {{-- Terminal Keberangkatan :
+                                @if ($pemesanan->id_tiket == 1)
+                                    Surabaya
+                                @elseif ($pemesanan->id_tiket == 2)
+                                    Sidoarjo
+                                @elseif ($pemesanan->id_tiket == 3)
+                                    Sidoarjo
+                                @elseif ($pemesanan->id_tiket == 4)
+                                    Surabaya
+
+                                @endif --}}
+                                @foreach ($tiket as $data)
+                                    @if ($data->id == $data_pemesanan['id_tiket'])
+
+                                    <div class="card-header bg-transparent header-elements-inline">
+                                        <h6 class="card-title text-primary">Terminal :
+                                            @if ($data->terminal_keberangkatan_id == 1)
+                                                Bungurasih
+                                            @elseif ($data->terminal_keberangkatan_id == 2)
+                                                Ramayana
+
+                                            @endif ->
+                                            {{ $data->terminal_tujuan}}
+                                        </h6>
+                                    </div>
+                                    @endif
+                                @endforeach
+
                                 </div>
                             </div>
                             <div class="col-sm-6">
