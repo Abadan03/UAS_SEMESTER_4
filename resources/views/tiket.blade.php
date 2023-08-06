@@ -72,7 +72,8 @@
                             <div class="col-sm-6">
                                 <div class="mb-4 ">
                                     <div class="text-sm-right">
-                                        <h4 class="invoice-color mb-2 mt-md-2">Id Pemesanan #<?= $data_pemesanan['id_pemesanan'] ?></h4>
+                                        {{-- <h4>{{ $data_pemesanan['id_pemesanan'] }}</h4> --}}
+                                        <h4 class="invoice-color mb-2 mt-md-2">Id Pemesanan #{{ $data_pemesanan['id_pemesanan'] }}</h4>
                                         <ul class="list list-unstyled mb-0">
                                         </ul>
                                     </div>

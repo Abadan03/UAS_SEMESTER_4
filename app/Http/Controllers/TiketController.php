@@ -32,15 +32,16 @@ class TiketController extends Controller
         // return view('riwayat-pemesanan', compact('data_pemesanan', 'tickets'));
 
         $data_pemesanan = $request->pemesanan;
-        // $id_tiket = $data_pemesanan;
         $ticketIds = $id_tiket->pluck('id_tiket')->toArray();
-
+        // $id_pemesanan = $idPemesanan;
+        // $id_pemesanan = $request->input('id_pemesanan');
+        // $id_pemesanan = $request->;
 
 
         $tiket = Ticket::whereIn('id', $ticketIds)->get();
         // $tiket = Ticket::whereIn
 
         return view('tiket', compact('data_pemesanan', 'tiket'));
-        // return var_dump($tiket);
+        // return var_dump($id_pemesanan);
     }
 }

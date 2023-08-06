@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nama_penumpang');
             $table->string('email');
             $table->integer('status');
-            $table->integer('no_telpon');
+            $table->string('no_telpon');
             $table->integer('id_pemesanan')->unique();
             $table->timestamps();
 

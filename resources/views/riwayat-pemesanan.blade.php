@@ -12,13 +12,12 @@
                             <br>
                         @endif
         @foreach ($data_pemesanan as $pemesanan)
-            {{-- @foreach ($tickets as $ticket) --}}
+
 
                 <div class="container">
                     <div class="d-flex gap-4 cardlist">
                         <div class="col-md-4 riwayat-1">
                             <h4>No. ID Pemesanan : {{ $pemesanan->id_pemesanan }}</h4>
-                            {{-- <h5>Terminal Keberangkatan : {{ $t::all()terminal_keberangkatan }}</h5> --}}
                             <h5>
                                 @foreach ($tickets as $ticket)
 
@@ -28,22 +27,19 @@
                                 @endforeach
                             </h5>
                             <h5>
-                                {{-- Terminal Keberangkatan : {{ $pemesanan->tickets->terminal_keberangkatan_id }}</h5> --}}
+
                                 Terminal Keberangkatan :
                                 @if ($pemesanan->id_tiket == 1)
-                                    Surabaya
+                                    Bungurasih
                                 @elseif ($pemesanan->id_tiket == 2)
-                                    Sidoarjo
+                                    Ramayana
                                 @elseif ($pemesanan->id_tiket == 3)
-                                    Sidoarjo
+                                    Ramayana
                                 @elseif ($pemesanan->id_tiket == 4)
-                                    Surabaya
+                                    Bungurasih
 
                                 @endif
                             </h5>
-                            {{-- <h5>Terminal Keberangkatan : {{ $pemesanan_find->id_tiket->terminal->terminal_keberangkatan }}</h5> --}}
-                            {{-- <h5>Terminal Keberangkatan : {{ $pemesanan->ticket->terminal->terminal_keberangkatan }}</h5> --}}
-                            {{-- <h3>07.00</h3> --}}
 
                             <?php $tiketId = $pemesanan->id_tiket ?>
                             @foreach ($tickets as $data)
@@ -69,32 +65,19 @@
                                     @elseif ($checkStatus == 4)
                                         Waiting
                                 @endif
-                                {{-- {{ $pemesanan->status }} --}}
+
                             </h4>
-                            {{-- <h5>Terminal Tujuan: {{ $pemesanan->id_tiket }}</h5> --}}
+
                             <h5>
-                                {{-- Terminal Tujuan : --}}
-                                {{-- {{ $ticket->terminal_tujuan }} --}}
-                                {{-- {{ $pemesanan->$tickets->terminal_tujuan }} --}}
-                                {{-- Access ticket data based on $pemesanan->id_tiket --}}
                                 Terminal Tujuan:
                                 @foreach ($tickets as $ticket)
                                     @if ($ticket->id == $pemesanan->id_tiket)
                                         {{ $ticket->terminal_tujuan }}
                                     @endif
                                 @endforeach
-                                {{-- @if ($pemesanan->id_tiket == 1)
-                                    Madiun
-                                @elseif ($pemesanan->id_tiket == 2)
-                                    Sidoarjo --}}
-                                {{-- @elseif ($pemesanan->id_tiket == 3) --}}
 
-                                {{-- @elseif ($pemesanan->id_tiket == 0) --}}
-
-                                {{-- @endif --}}
                             </h5>
-                            {{-- <h5>Terminal Tujuan: {{ $ticket->terminal }}</h5> --}}
-                            {{-- <h3>07.00</h3> --}}
+
                             <?php $tiketId = $pemesanan->id_tiket ?>
                             @foreach ($tickets as $data)
                                 @if ($data->id == $tiketId)
@@ -103,14 +86,14 @@
                             @endforeach
                             <p>24 Juli 2023</p>
                             @if ($pemesanan->status == 0)
-                                <a href="{{ route('konfirmasi.show', ['konfirmasi' => $pemesanan->id_tiket]) }}">Bayar</a>
+                                <a href="{{ route('konfirmasi.show', ['konfirmasi' => $pemesanan->id_tiket, 'idPemesanan' => $pemesanan->id_pemesanan]) }}">Bayar</a>
+
                                 @elseif ($pemesanan->status == 1)
                                 <a href="{{ route('tiket.index', ['pemesanan' => $pemesanan]) }}">Detail</a>
                             @endif
                         </div>
                     </div>
                 </div>
-            {{-- @endforeach --}}
         @endforeach
     </section>
 

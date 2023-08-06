@@ -32,7 +32,7 @@
                                 <input type="hidden" name="nama_penumpang" id="nama_penumpang" value="{{ Auth::user()->name }}">
                                 <input type="hidden" name="email" id="email" value="{{ Auth::user()->email }}">
                                 <input type="hidden" name="id_user" id="id_user" value="{{ Auth::user()->id }}">
-                                <input type="hidden" name="no_telpon" id="no_telpon" value="911">
+                                <input type="hidden" name="no_telpon" id="no_telpon" value="{{ Auth::user()->no_telpon }}">
                                 <input type="hidden" name="id_tiket" id="id_tiket" value="{{ $ticket->id }}">
                                 <input type="hidden" name="status" id="status" value="0">
                                 {{-- Input Hidden untuk data dari user tanpa menggunakan 2 parameter END --}}
@@ -126,17 +126,5 @@
             @endforeach
         }
         @endif
-            {{-- @foreach ($terminals as $terminal)
-                <p>{{ $terminal->terminal_keberangkatan }} - {{ $terminal->terminal_tujuan }}</p>
-        @endforeach
-        @foreach ($tickets as $ticket)
-            <p>Ticket ID: {{ $ticket->id }}</p>
-            <p>Nama Travel: {{ $ticket->nama_travel }}</p>
-            <p>Terminal Keberangkatan: {{ $ticket->terminal_keberangkatan }}</p>
-            <p>Terminal Tujuan: {{ $ticket->terminal_tujuan }}</p>
-        @endforeach
-    </div> --}}
 
-    {{-- {{ $searchTerm }}
-    {{ $searchKeberangkatan }} --}}
 </div>
