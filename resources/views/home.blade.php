@@ -20,7 +20,8 @@
             <div class="container text-black">
                 <div class="row justify-content-end">
                    <h1>ABOUT US</h1>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas atque fugiat aliquid magnam repudiandae totam non modi deleniti facilis tempora quisquam cum nesciunt itaque optio doloremque maiores blanditiis, consectetur vero.</p>
+                   <hr>
+                   <p>Bisbus adalah situs web yang menyediakan cara mudah dan nyaman untuk memesan tiket bus secara online. Situs ini menampilkan informasi bus terkait tujuan, dan jadwal yang dapat dipilih. Situs ini memberikan informasi harga dan fasilitas yang disediakan oleh perusahaan bus. Pelanggan dapat melakukan pembayaran melalui transfer bank untuk mempermudah pembayaran.</p>
 
 
                 </div>
@@ -41,10 +42,7 @@
                         alt="booking_img">
                     <div class="card-title">Pesan Tiket</div>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem unde
-                            dicta
-                            incidunt quod molestiae aperiam explicabo maiores labore accusantium, dolor cumque
-                            cupiditate repellendus laboriosam error maxime architecto nemo iure voluptate.</p>
+                        <p class="card-text">Pesan tiket Anda untuk acara favorit Anda dengan mudah dan cepat. Pilih dari berbagai acara yang tersedia, termasuk konser, film, dan pertunjukan. Anda juga dapat memilih kursi Anda secara online.</p>
                     </div>
                 </div>
 
@@ -53,22 +51,16 @@
                         alt="booking_img">
                     <div class="card-title">Lihat Jadwal</div>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem unde
-                            dicta
-                            incidunt quod molestiae aperiam explicabo maiores labore accusantium, dolor cumque
-                            cupiditate repellendus laboriosam error maxime architecto nemo iure voluptate.</p>
+                        <p class="card-text">Lihat jadwal acara yang tersedia di kota Anda. Anda dapat mencari acara berdasarkan tanggal, travel, atau lokasi.</p>
                     </div>
                 </div>
 
                 <div class="card text-center">
                     <img src="{{ Vite::asset('resources/images/choose_seat.svg') }}" class="card-img-top mt-3 mx-auto"
                         alt="booking_img">
-                    <div class="card-title">Dapatkan Kursi</div>
+                    <div class="card-title">Pesankan Tiket Lebih Mudah</div>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem unde
-                            dicta
-                            incidunt quod molestiae aperiam explicabo maiores labore accusantium, dolor cumque
-                            cupiditate repellendus laboriosam error maxime architecto nemo iure voluptate.</p>
+                        <p class="card-text">Proses yang sedeharna dalam pemesanan, membuatnya lebih cepat dan praktis bagi pelanggan.</p>
                     </div>
                 </div>
 

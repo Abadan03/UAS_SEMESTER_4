@@ -1,14 +1,4 @@
-<?php
-    // use App\Models\dataPemesanan;
-    use App\Models\Ticket;
-    // $userId = Auth::user()->id();
 
-    // Query the user data using the ID
-    // $user = \App\Models\dataPemesanan::find($userId);
-    // $tickets = dataPemesanan::find(Auth::user()->id)->get();
-    // $tickets = dataPemesanan::where('id_user', Auth::user()->id)->get();
-    // var_dump($tickets);
-?>
 @extends('layouts.defaults')
 @section('content')
 
@@ -53,14 +43,14 @@
                             </h5>
                             {{-- <h5>Terminal Keberangkatan : {{ $pemesanan_find->id_tiket->terminal->terminal_keberangkatan }}</h5> --}}
                             {{-- <h5>Terminal Keberangkatan : {{ $pemesanan->ticket->terminal->terminal_keberangkatan }}</h5> --}}
-                            <h3>07.00</h3>
-                            {{-- @foreach ($tickets as $data)
-                                @if ($data->jam == $pemesanan->)
+                            {{-- <h3>07.00</h3> --}}
 
-                                <h3>{{ $data->jam_tujuan }}</h3>
+                            <?php $tiketId = $pemesanan->id_tiket ?>
+                            @foreach ($tickets as $data)
+                                @if ($data->id == $tiketId)
+                                    <h3>{{ $data->jam_keberangkatan }}</h3>
                                 @endif
-                            @endforeach --}}
-                            {{-- <h3><?= $tickets['jam_tujuan'] ?></h3> --}}
+                            @endforeach
                             <p>24 Juli 2023</p>
                         </div>
                         <div class="col-md-4 mt-5">
@@ -104,7 +94,13 @@
                                 {{-- @endif --}}
                             </h5>
                             {{-- <h5>Terminal Tujuan: {{ $ticket->terminal }}</h5> --}}
-                            <h3>07.00</h3>
+                            {{-- <h3>07.00</h3> --}}
+                            <?php $tiketId = $pemesanan->id_tiket ?>
+                            @foreach ($tickets as $data)
+                                @if ($data->id == $tiketId)
+                                    <h3>{{ $data->jam_tujuan }}</h3>
+                                @endif
+                            @endforeach
                             <p>24 Juli 2023</p>
                             @if ($pemesanan->status == 0)
                                 <a href="{{ route('konfirmasi.show', ['konfirmasi' => $pemesanan->id_tiket]) }}">Bayar</a>

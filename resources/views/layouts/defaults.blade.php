@@ -97,8 +97,7 @@
                 {{-- Description section --}}
                 <div class="description">
                     <p><span id="footer-bis">Bis</span><span id="footer-bus">Bus</span></p>
-                    <p class="content">Lorem ipsum dolor sit amet consectetur. Diam dolor pulvinar cras volutpat neque
-                        odio pellentesque iaculis egestas.</p>
+                    <p class="content">Pesan tiket, lihat jadwal, dan pilih kursi untuk acara favorit Anda dengan mudah.</p>
                 </div>
                 <div class="w-100 d-flex justify-center gap-lg-5 secondary-content">
                     <div class="flex-row">
