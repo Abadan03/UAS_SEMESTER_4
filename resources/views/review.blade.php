@@ -13,6 +13,7 @@
                 <div class="col-md-7">
                     <h2>Rincian Penumpang</h2>
                     {{-- bagian ini nanti akan menampilkan isi dari form input sebelumnya --}}
+
                     <div class="review-form bg-light rounded-2">
                         <div class="row p-2">
                             <div class="form-floating mb-2">
@@ -57,7 +58,7 @@
                                     {{-- <button class="btn btn-warning text-white" type="submit">
                                         Pembayaran
                                     </button> --}}
-                                    <a href="{{ route('pembayaran.show', ['pembayaran' => $data_user->id_pemesanan]) }}" class="btn btn-warning text-white" >
+                                    <a href="{{ route('pembayaran.show', ['pembayaran' => $id_pemesanan]) }}" class="btn btn-warning text-white" >
                                         Pembayaran
                                     </a>
                                 {{-- </form> --}}
@@ -70,7 +71,11 @@
                     <div class="bg-light rounded-3 mb-3">
                         <div class="id-pesanan d-flex gap-3 p-3 justify-content-between">
                             <p class="fs-5">No.ID Pesanan</p>
-                            <p class="fs-5">{{ $data_user->id_pemesanan }}</p>
+                            {{-- <p class="fs-5">{{ $data_user->id_pemesanan }}</p> --}}
+                            <p class="fs-5">{{ $id_pemesanan }}</p>
+                            {{-- @foreach ($id_pemesanan as $id)
+                                <p class="fs-5">{{ $id->id_pemesanan }}</p>
+                            @endforeach --}}
                         </div>
                     </div>
                     <div class="bg-light rounded-3">

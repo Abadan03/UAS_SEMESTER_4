@@ -9,6 +9,7 @@ use App\Models\Terminal;
 use App\Models\Ticket;
 use App\Models\dataPemesanan;
 use App\Models\Konfirmasi_Pembayaran;
+use Illuminate\Support\Facades\Auth;
 
 
 class KonfirmasiPembayaran extends Controller
@@ -55,27 +56,27 @@ class KonfirmasiPembayaran extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $konfirmasi)
+    public function show(string $konfirmasi, Request $idPemesanan)
     {
         //
         // return var_dump($konfirmasi, true);
         // $test = $konfirmasi->nama_penumpangan;
 
         $id = $konfirmasi;
-        // access to DataBase
-        // $data_user = dataPemesanan::find($konfirmasi);
-        // $data_user = dataPemesanan::whereIn('id_tiket', $id)->get();
-        // $data_user = collect(DB::select("
-        //     SELECT * FROM data_pemesanan WHERE id_tiket = $id
-        // "));
-        // $test = $konfirmasi;
+        $userId = Auth::user()->id;
+        $id_tiket = collect(DB::select("
+        SELECT * FROM data_pemesanan WHERE id_user = $userId
+        "));
 
 
-        // $tickets = collect(DB::select("
-        //     SELECT * FROM ticket WHERE id IN ('" . implode("','", $ticketIds) . "')
-        // "));
+        $ticketIds = $id_tiket->pluck('id_user')->toArray();
+        // $idPemesanan = $id_tiket->pluck('id_pemesanan')->toArray();
+        $id_pemesanan = $idPemesanan->idPemesanan;
 
-        $data_user = dataPemesanan::where('id_tiket', $konfirmasi)->firstOrFail();
+
+        $data_user = dataPemesanan::whereIn('id_user', $ticketIds)->firstOrFail();
+        // $id_pemesanan = dataPemesanan::whereIn('id_pemesanan', $idPemesanan)->firstOrFail();
+        // $id_pemesanan = $idPemesanan;
 
         $konfirmasiArray = [$konfirmasi];
         $tickets = Ticket::whereIn('id', $konfirmasiArray)->get();
@@ -93,21 +94,9 @@ class KonfirmasiPembayaran extends Controller
 
         $first_id_tiket = $id_tiket_values->first();
         $tickets_data = Ticket::whereIn('id', $ticketIds)->get();
-        // TESTTTTTTTTTTTTTTTTT
 
-        // $terminal_tujuan = DataPemesanan::join('ticket', 'data_pemesanan.id_tiket', '=', 'tickets.id')
-        // ->join('terminals', 'tickets.terminal_tujuan_id', '=', 'terminals.id')
-        // ->where('data_pemesanan.id_tiket', $id_tiket)
-        // ->select('terminals.terminal_tujuan')
-        // ->first();
-        // return var_dump($data_user);
-        return view('review', compact('data_user', 'tickets', 'tickets_data', 'id_tiket', 'id', 'test_tiket'));
-        // return view('review', compact('data_user', 'tickets'));
-
-
-        // return view('review', compact('data_user'));
-        // return view('review');
-        // return var_dump($user);
+        return view('review', compact('data_user', 'tickets', 'tickets_data', 'id_tiket', 'id', 'test_tiket', 'id_pemesanan'));
+        // return var_dump($id_pemesanan);
     }
 
     /**
